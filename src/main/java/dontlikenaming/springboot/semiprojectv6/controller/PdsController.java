@@ -10,6 +10,6 @@ public class PdsController {
 
     @GetMapping(value = "/list")
     public String list(){
-        return "pds/list.html";
+        return "pds/list";
     }
 }

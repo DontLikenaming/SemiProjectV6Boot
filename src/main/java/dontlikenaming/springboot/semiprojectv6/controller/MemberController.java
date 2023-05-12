@@ -31,7 +31,7 @@ public class MemberController {
     }
 
     @GetMapping(value = "/loginfail")
-    public String loginfail(){return "loginfail.tiles";}
+    public String loginfail(){return "loginfail";}
 
     @GetMapping(value = "/logout")
     public String Logout(HttpSession sess){

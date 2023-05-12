@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultra.net.nz/thymeleaf/layout">
-<th:block th:replace="main" />
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,13 +12,13 @@
 </head>
 <body>
 <div class="container">
-    <th:block th:replace="layout/header :: header" />
-    <th:block layout:fragment="content" />
-    <th:block th:replace="layout/footer :: footer" />
+    <th:block th:replace="layout/header :: header" ></th:block>
+    <th:block layout:fragment="content" ></th:block>
+    <th:block th:replace="layout/footer :: footer" ></th:block>
 </div>
 
 
-    <%--로그인 폼 모달--%>
+    <!--로그인 폼 모달-->
     <div class="modal fade" id="loginModalfrm" role="dialog" data-bs-backdrop="static"
          data-bs-keyboard="false">
         <div class="modal-dialog">

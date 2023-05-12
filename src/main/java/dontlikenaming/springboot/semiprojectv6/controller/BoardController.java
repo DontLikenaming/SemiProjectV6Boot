@@ -23,7 +23,7 @@ public class BoardController {
         else if(page>cntpg){page = cntpg;}
 
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("board/list.html");
+        mv.setViewName("board/list");
         mv.addObject("bdlist", bdsrv.readBoard(page));
         mv.addObject("page", page);
         mv.addObject("stpg", (page-1)/10*10+1);
@@ -44,18 +44,18 @@ public class BoardController {
         mv.addObject("page", page);
         mv.addObject("stpg", (page-1)/10*10+1);
         mv.addObject("cntpg", cntpg);
-        mv.setViewName("board/list.html");
+        mv.setViewName("board/list");
         return mv;
     }
 
     @GetMapping(value = "/write")
     public String write(){
-        return "board/write.html";
+        return "board/write";
     }
 
     @PostMapping(value = "/write")
     public String writeok(Board bd, String grecaptcha){
-        String view = "error.html";
+        String view = "error";
         grecaptcha = null;
 
         if(bdsrv.newBoard(bd)){ view = "redirect:/board/list"; }
@@ -71,7 +71,7 @@ public class BoardController {
 
         ModelAndView mv = new ModelAndView();
         mv.addObject("bd", bdsrv.readOneBoard(bno));
-        mv.setViewName("board/view.html");
+        mv.setViewName("board/view");
 
         return mv;
     }

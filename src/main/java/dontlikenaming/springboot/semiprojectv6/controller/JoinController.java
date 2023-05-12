@@ -20,29 +20,29 @@ public class JoinController {
 
     @GetMapping(value = "/agree")
     public String agree(){
-        return "join/agree.html";
+        return "join/agree";
     }
 
     @GetMapping(value = "/checkme")
     public String checkme(){
-        return "join/checkme.html";
+        return "join/checkme";
     }
 
     @PostMapping(value = "/joinme")
     public ModelAndView joinme(Member mb){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("join/joinme.html");
+        mv.setViewName("join/joinme");
         mv.addObject("mb", mb);
         return mv;
     }
 
     @PostMapping(value = "/joinok")
     public String joinok(Member m, String grecaptcha){
-        String view = "error.html";
+        String view = "error";
         grecaptcha = null;
 
         if(jnsrv.newMember(m)){
-            view = "join/joinok.html";
+            view = "templates/join/joinok";
         }
 
         return view;

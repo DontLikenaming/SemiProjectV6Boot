@@ -25,5 +25,5 @@ lgoutbtn?.addEventListener("click", ()=>{
 })
 
 joinpgbtn?.addEventListener("click", ()=>{
-    location.href="/join/agree";
+    location.href="../../join/agree";
 })

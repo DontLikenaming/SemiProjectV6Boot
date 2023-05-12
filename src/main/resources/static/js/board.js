@@ -13,7 +13,7 @@ findbtn?.addEventListener("click",()=>{
 
 let newbtn = document.querySelector("#newbtn");
 newbtn?.addEventListener("click",()=>{
-    location.href = "/board/write";
+    location.href = "../../board/write";
 })
 
 let bdfrm = document.forms.bdfrm;
@@ -22,11 +22,11 @@ let writebtn = document.querySelector("#writebtn");
 let cancelbtn = document.querySelector("#cancelbtn");
 
 go2board?.addEventListener("click",()=>{
-    location.href = "/board/list?cpg=1";
+    location.href = "../../board/list?cpg=1";
 })
 
 cancelbtn?.addEventListener("click",()=>{
-    location.href = "/board/list?cpg=1";
+    location.href = "../../board/list?cpg=1";
 })
 
 writebtn?.addEventListener("click",()=>{
@@ -58,5 +58,5 @@ nextbtn?.addEventListener("click",()=>{
     location.href = `/board/view?bno=`+nextbno;
 })
 listbtn?.addEventListener("click",()=>{
-    location.href = "/board/list?cpg=1";
+    location.href = "../../board/list?cpg=1";
 })

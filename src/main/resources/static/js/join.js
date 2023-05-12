@@ -11,7 +11,7 @@ let agreeok = document.querySelector("#agreeok");
 agreeok?.addEventListener("click", () => {
     if(!agree1.checked) alert("이용약관 동의에 체크해주세요!")
     else if(!agree2.checked) alert("개인정보 이용 동의에 체크해주세요!")
-    else location.href="/join/checkme";
+    else location.href="../../join/checkme";
 })
 
 // 미동의 버튼 이벤트

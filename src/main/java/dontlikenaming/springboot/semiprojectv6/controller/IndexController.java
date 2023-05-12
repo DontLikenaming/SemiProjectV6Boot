@@ -13,11 +13,11 @@ public class IndexController {
 
     @GetMapping(value = "/intro")
     public String intro(){
-        return "intro.html";
+        return "intro";
     }
 
     @GetMapping(value = "/admin")
     public String admin(){
-        return "admin.html";
+        return "admin";
     }
 }

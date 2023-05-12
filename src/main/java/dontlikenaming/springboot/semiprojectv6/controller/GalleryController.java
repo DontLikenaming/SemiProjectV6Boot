@@ -10,6 +10,6 @@ public class GalleryController {
 
     @GetMapping(value = "/list")
     public String list(){
-        return "gallery/list.html";
+        return "gallery/list";
     }
 }
