@@ -27,16 +27,14 @@
         <div class="row offset-2 col-8 mt-3">
 
             <table>
-                <tr><th class="vtit" colspan="2"></th></tr>
+                <tr><th class="vtit" colspan="2" th:text="${bd.title}">&nbsp;</th></tr>
                 <tr class="vinfo">
-                    <td class="text-start"></td>
-                    <td class="text-end"> /  / </td>
+                    <td class="text-start" th:text="${bd.userid}">&nbsp;</td>
+                    <td class="text-end" th:text="|${bd.regdate} / ${bd.thumbs} / ${bd.views}|">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="vcont" colspan="2">
-                        <div>
-
-                        </div>
+                    <td class="vcont" colspan="2" th:text="${bd.content}">
+                            &nbsp;
                     </td>
                 </tr>
             </table>

@@ -33,7 +33,7 @@
                         <label class="col-2 form-label text-danger text-end mt-1" for="name">이름</label>
                         <div class="col-3">
                             <input type="text" class="form-control border-danger bg-light"
-                                   id="name" name="name" value="" readonly>
+                                   id="name" name="name" th:value="${mb.name}" readonly>
                         </div>
                     </div>
                     <div class="row col-11 offset-1 mt-3 align-items-center">
@@ -115,14 +115,14 @@
                                for="pnum1">전화번호</label>
                         <div class="col-2">
                             <input type="text" name="pnum1" id="pnum1"
-                                   class="form-control border-danger" value="" readonly>
+                                   class="form-control border-danger" th:value="${mb.pnum1}" readonly>
                         </div>
                         <div class="col-2">
                             <input type="text" name="pnum2" id="pnum2"
-                                   class="form-control border-danger" value="" readonly> </div>
+                                   class="form-control border-danger" th:value="${mb.pnum2}" readonly> </div>
                         <div class="col-2">
                             <input type="text" name="pnum3" id="pnum3"
-                                   class="form-control border-danger" value="" readonly> </div>
+                                   class="form-control border-danger" th:value="${mb.pnum3}" readonly> </div>
                     </div>
 
                     <div class="row col-11 offset-1  align-items-center">
