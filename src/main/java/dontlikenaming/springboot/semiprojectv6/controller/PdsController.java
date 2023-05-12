@@ -1,4 +1,4 @@
-package dontlikenaming.springboot.semiprojectv6boot.controller;
+package dontlikenaming.springboot.semiprojectv6.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,6 @@ public class PdsController {
 
     @GetMapping(value = "/list")
     public String list(){
-        return "pds/list.tiles";
+        return "pds/list.html";
     }
 }

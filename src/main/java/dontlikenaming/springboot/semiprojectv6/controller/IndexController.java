@@ -1,4 +1,4 @@
-package dontlikenaming.springboot.semiprojectv6boot.controller;
+package dontlikenaming.springboot.semiprojectv6.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,16 +8,16 @@ public class IndexController {
 
     @GetMapping(value = "/")
     public String index(){
-        return "index.tiles";
+        return "index";
     }
 
     @GetMapping(value = "/intro")
     public String intro(){
-        return "intro.tiles";
+        return "intro.html";
     }
 
     @GetMapping(value = "/admin")
     public String admin(){
-        return "admin.tiles";
+        return "admin.html";
     }
 }

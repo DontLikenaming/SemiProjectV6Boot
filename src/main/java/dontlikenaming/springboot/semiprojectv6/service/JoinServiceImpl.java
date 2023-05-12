@@ -1,9 +1,9 @@
-package dontlikenaming.springboot.semiprojectv6boot.service;
+package dontlikenaming.springboot.semiprojectv6.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dontlikenaming.springboot.semiprojectv6boot.DAO.JoinDAO;
-import dontlikenaming.springboot.semiprojectv6boot.model.Member;
+import dontlikenaming.springboot.semiprojectv6.DAO.JoinDAO;
+import dontlikenaming.springboot.semiprojectv6.model.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

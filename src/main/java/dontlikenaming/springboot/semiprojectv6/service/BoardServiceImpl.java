@@ -1,7 +1,7 @@
-package dontlikenaming.springboot.semiprojectv6boot.service;
+package dontlikenaming.springboot.semiprojectv6.service;
 
-import dontlikenaming.springboot.semiprojectv6boot.DAO.BoardDAO;
-import dontlikenaming.springboot.semiprojectv6boot.model.Board;
+import dontlikenaming.springboot.semiprojectv6.DAO.BoardDAO;
+import dontlikenaming.springboot.semiprojectv6.model.Board;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

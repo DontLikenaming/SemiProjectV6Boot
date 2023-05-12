@@ -1,6 +1,6 @@
-package dontlikenaming.springboot.semiprojectv6boot.service;
+package dontlikenaming.springboot.semiprojectv6.service;
 
-import dontlikenaming.springboot.semiprojectv6boot.model.Member;
+import dontlikenaming.springboot.semiprojectv6.model.Member;
 
 import javax.servlet.http.HttpSession;
 

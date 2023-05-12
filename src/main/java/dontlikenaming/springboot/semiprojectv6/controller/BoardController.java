@@ -1,8 +1,8 @@
-package dontlikenaming.springboot.semiprojectv6boot.controller;
+package dontlikenaming.springboot.semiprojectv6.controller;
 
 
-import dontlikenaming.springboot.semiprojectv6boot.model.Board;
-import dontlikenaming.springboot.semiprojectv6boot.service.BoardService;
+import dontlikenaming.springboot.semiprojectv6.model.Board;
+import dontlikenaming.springboot.semiprojectv6.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +23,7 @@ public class BoardController {
         else if(page>cntpg){page = cntpg;}
 
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("board/list.tiles");
+        mv.setViewName("board/list.html");
         mv.addObject("bdlist", bdsrv.readBoard(page));
         mv.addObject("page", page);
         mv.addObject("stpg", (page-1)/10*10+1);
@@ -44,18 +44,18 @@ public class BoardController {
         mv.addObject("page", page);
         mv.addObject("stpg", (page-1)/10*10+1);
         mv.addObject("cntpg", cntpg);
-        mv.setViewName("board/list.tiles");
+        mv.setViewName("board/list.html");
         return mv;
     }
 
     @GetMapping(value = "/write")
     public String write(){
-        return "board/write.tiles";
+        return "board/write.html";
     }
 
     @PostMapping(value = "/write")
     public String writeok(Board bd, String grecaptcha){
-        String view = "error.tiles";
+        String view = "error.html";
         grecaptcha = null;
 
         if(bdsrv.newBoard(bd)){ view = "redirect:/board/list"; }
@@ -71,7 +71,7 @@ public class BoardController {
 
         ModelAndView mv = new ModelAndView();
         mv.addObject("bd", bdsrv.readOneBoard(bno));
-        mv.setViewName("board/view.tiles");
+        mv.setViewName("board/view.html");
 
         return mv;
     }

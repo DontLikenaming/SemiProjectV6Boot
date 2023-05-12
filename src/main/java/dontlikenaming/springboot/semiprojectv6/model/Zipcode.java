@@ -1,4 +1,4 @@
-package dontlikenaming.springboot.semiprojectv6boot.model;
+package dontlikenaming.springboot.semiprojectv6.model;
 
 import lombok.Data;
 

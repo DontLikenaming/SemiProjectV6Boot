@@ -1,7 +1,7 @@
-package dontlikenaming.springboot.semiprojectv6boot.controller;
+package dontlikenaming.springboot.semiprojectv6.controller;
 
-import dontlikenaming.springboot.semiprojectv6boot.model.Member;
-import dontlikenaming.springboot.semiprojectv6boot.service.JoinService;
+import dontlikenaming.springboot.semiprojectv6.model.Member;
+import dontlikenaming.springboot.semiprojectv6.service.JoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,29 +20,29 @@ public class JoinController {
 
     @GetMapping(value = "/agree")
     public String agree(){
-        return "join/agree.tiles";
+        return "join/agree.html";
     }
 
     @GetMapping(value = "/checkme")
     public String checkme(){
-        return "join/checkme.tiles";
+        return "join/checkme.html";
     }
 
     @PostMapping(value = "/joinme")
     public ModelAndView joinme(Member mb){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("join/joinme.tiles");
+        mv.setViewName("join/joinme.html");
         mv.addObject("mb", mb);
         return mv;
     }
 
     @PostMapping(value = "/joinok")
     public String joinok(Member m, String grecaptcha){
-        String view = "error.tiles";
+        String view = "error.html";
         grecaptcha = null;
 
         if(jnsrv.newMember(m)){
-            view = "join/joinok.tiles";
+            view = "join/joinok.html";
         }
 
         return view;

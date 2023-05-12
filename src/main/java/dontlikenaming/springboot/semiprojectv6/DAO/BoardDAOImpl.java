@@ -1,6 +1,6 @@
-package dontlikenaming.springboot.semiprojectv6boot.DAO;
+package dontlikenaming.springboot.semiprojectv6.DAO;
 
-import dontlikenaming.springboot.semiprojectv6boot.model.Board;
+import dontlikenaming.springboot.semiprojectv6.model.Board;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

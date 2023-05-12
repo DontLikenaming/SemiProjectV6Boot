@@ -4,7 +4,7 @@
 <mapper namespace="join">
 <select id="findZipcode" statementType="PREPARED"
     parameterType="String"
-    resultType="dontlikenaming.springboot.semiprojectv5.model.Zipcode">
+    resultType="dontlikenaming.springboot.semiprojectv6.model.Zipcode">
         select * from zipcode_2013 where dong like #{dong} order by zipcode asc
     </select>
     <select id="selectOneUid" statementType="PREPARED"
@@ -13,7 +13,7 @@
         select count(userid) cnt from member where userid = #{uid}
     </select>
     <insert id="insertMember" statementType="PREPARED"
-            parameterType="dontlikenaming.springboot.semiprojectv5.model.Member">
+            parameterType="dontlikenaming.springboot.semiprojectv6.model.Member">
         insert into member (name, pnum1, pnum2, pnum3, userid, passwd, zipcode, addr1, addr2, email) values (#{name}, #{pnum1}, #{pnum2}, #{pnum3}, #{userid}, #{passwd}, #{zipcode}, #{addr1}, #{addr2}, #{email})
     </insert>
 </mapper>

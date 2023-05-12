@@ -1,7 +1,7 @@
-package dontlikenaming.springboot.semiprojectv6boot.controller;
+package dontlikenaming.springboot.semiprojectv6.controller;
 
-import dontlikenaming.springboot.semiprojectv6boot.model.Member;
-import dontlikenaming.springboot.semiprojectv6boot.service.MemberService;
+import dontlikenaming.springboot.semiprojectv6.model.Member;
+import dontlikenaming.springboot.semiprojectv6.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
