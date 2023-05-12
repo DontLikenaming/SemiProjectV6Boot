@@ -58,5 +58,5 @@ nextbtn?.addEventListener("click",()=>{
     location.href = `/board/view?bno=`+nextbno;
 })
 listbtn?.addEventListener("click",()=>{
-    location.href = "../../board/list?cpg=1";
+    location.href = "../../board/list?page=1";
 })
