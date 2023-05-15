@@ -5,8 +5,9 @@
         <div class="col">
             <h1 id="logo"><strong>Lorem Ipsum</strong></h1>
         </div>
-        <div class="col text-end mt-2">
-            <th:block th:if="${#httpServletRequest.requestURI eq '/'} or ${#strings.substring(#httpServletRequest.requestURI, 0, 6) ne '/join/'}">
+        <div class="col text-end mt-2" th:with="path=${#request.getRequestURI()}">
+            <!--<th:block th:if="${#httpServletRequest.requestURI eq '/'} or ${#strings.substring(#httpServletRequest.requestURI, 0, 6) ne '/join/'}">-->
+            <th:block th:if="${not #strings.startsWith(path, '/join')}">
             <th:block th:if="${session.UID eq null}">
                     <button type="button" class="btn btn-danger"
                             data-bs-target="#loginModalfrm" data-bs-toggle="modal">로그인</button>
