@@ -7,25 +7,26 @@
         <i class="fa-solid fa-book fa-2xl"> 게시글 보기</i>
         <hr>
     </div>
+
     <div class="row mt-5 mb-3">
         <div class="row offset-2 col-4">
-
             <button type="button" class="btn btn-light col-4" id="prebtn" name="prebtn">
                 <i class="fa fa-chevron-left"> 이전 글</i>
             </button>
-            &nbsp;
             <button type="button" class="btn btn-light col-4" id="nextbtn" name="nextbtn">
                 <i class="fa fa-chevron-right"> 다음 글</i>
             </button>
-
         </div>
+
         <div class="col-4 text-end">
-            <button type="button" class="btn btn-success" id="newbtn" name="newbtn">
-                <i class="fa fa-plus-circle"> 새 글 쓰기</i>
-            </button>
+            <th:block th:if="${not #strings.isEmpty(session.UID)}">
+                <button type="button" class="btn btn-success" id="newbtn" name="newbtn">
+                    <i class="fa fa-plus-circle"> 새 글 쓰기</i>
+                </button>
+            </th:block>
         </div>
-        <div class="row offset-2 col-8 mt-3">
 
+        <div class="row offset-2 col-8 mt-3">
             <table>
                 <tr><th class="vtit" colspan="2" th:text="${bd.title}">&nbsp;</th></tr>
                 <tr class="vinfo">
@@ -34,7 +35,6 @@
                 </tr>
                 <tr>
                     <td class="vcont" colspan="2" th:text="${bd.content}">
-                            &nbsp;
                     </td>
                 </tr>
             </table>
@@ -54,7 +54,6 @@
                     </button>
                 </th:block>
             </div>
-
             <div class="col-4 text-end">
                 <button type="button" class="btn btn-light" id="listbtn" name="listbtn">
                     <i class="fa fa-list"> 목록으로</i>
